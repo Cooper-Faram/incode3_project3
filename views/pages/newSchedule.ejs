@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mr. Coffee | New Schedule</title>
+        <link rel="stylesheet" type="text/css" href="/css/application.css" />
+    </head>
+    <body>
+        <%- include('../includes/header') %>
+        <section>
+            <h2>New Schedule:</h2>
+            <form action="/schedules/new" method="POST" novalidate>
+                <div class="container">
+                    <label for="user_id"
+                        ><span>User ID *</span>
+                        <input for="user_id" type="text" name="user_id" placeholder="eg. 1" />
+                    </label>
+                </div>
+                <div class="container">
+                    <label for="day"
+                        ><span>Day *</span>
+                        <input for="day" type="text" name="day" placeholder="eg. 3" />
+                    </label>
+                </div>
+                <div class="container">
+                    <label for="start_at"
+                        ><span>Starts at *</span>
+                        <input for="start_at" type="text" name="start_at" placeholder="eg. 12PM" />
+                    </label>
+                </div>
+                <div class="container">
+                    <label for="end_at"
+                        ><span>Ends at *</span>
+                        <input for="end_at" type="text" name="end_at" placeholder="eg. 4AM" />
+                    </label>
+                </div>
+                <button type="submit">Save</button>
+            </form>
+        </section>
+        <%- include('../includes/footer') %>
+    </body>
+</html>

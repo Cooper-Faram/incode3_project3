@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mr. Coffee | Users</title>
+        <link rel="stylesheet" type="text/css" href="/css/application.css" />
+    </head>
+    <body>
+        <%- include('../includes/header') %>
+        <section>
+            <h2>Users:</h2>
+            <br />
+            <% for (let i = 0; i < users.length; i++) { %>
+            <p><strong>First name:</strong> <%=users[i].firstName%></p>
+            <p><strong>Last name:</strong> <%=users[i].lastName%></p>
+            <p><strong>Email:</strong> <%=users[i].email%></p>
+            <br />
+            <% } %>
+        </section>
+        <%- include('../includes/footer') %>
+    </body>
+</html>

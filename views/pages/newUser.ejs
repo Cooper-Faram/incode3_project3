@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mr. Coffee | New User</title>
+        <link rel="stylesheet" type="text/css" href="/css/application.css" />
+    </head>
+    <body>
+        <%- include('../includes/header') %>
+        <section>
+            <h2>New User:</h2>
+            <form action="/users/new" method="POST" novalidate>
+                <div class="container">
+                    <label for="firstName"
+                        ><span>First Name *</span>
+                        <input type="text" id="firstName" name="firstName" placeholder="eg. Britney" />
+                    </label>
+                </div>
+                <div class="container">
+                    <label for="lastName"
+                        ><span>Last Name *</span>
+                        <input type="text" id="lastName" name="lastName" placeholder="eg. Spears" />
+                    </label>
+                </div>
+                <div class="container">
+                    <label for="email"
+                        ><span>Email *</span>
+                        <input type="text" id="email" name="email" placeholder="eg. leavebritneyalone@gmail.com" />
+                    </label>
+                </div>
+                <div class="container">
+                    <label for="password"
+                        ><span>Password *</span>
+                        <input type="text" id="password" name="password" placeholder="eg. Britney2000!" />
+                    </label>
+                </div>
+                <button type="submit">Save</button>
+            </form>
+        </section>
+        <%- include('../includes/footer') %>
+    </body>
+</html>
